@@ -1,0 +1,36 @@
+{
+  "name": "ts-template",
+  "version": "0.1.0",
+  "description": "typescript, eslint",
+  "main": "./src/index.ts",
+  "author": "Roman <bromanla.json@gmail.com>",
+  "private": true,
+  "license": "ISC",
+  "scripts": {
+    "start": "cross-env TS_NODE_BASEURL=./build node -r tsconfig-paths/register ./build/index.js",
+    "start:watch": "nodemon ./src/index.ts",
+    "dev": "ts-node -r tsconfig-paths/register ./src/index.ts",
+    "clean": "tsc --build --clean",
+    "build": "tsc --build",
+    "build:clean": "npm run clean && npm run build"
+  },
+  "dependencies": {
+    "cross-env": "^7.0.3",
+    "dotenv": "^10.0.0",
+    "tsconfig-paths": "^3.12.0",
+    "winston": "^3.3.3"
+  },
+  "devDependencies": {
+    "@types/node": "^16.11.12",
+    "@typescript-eslint/eslint-plugin": "^5.6.0",
+    "@typescript-eslint/parser": "^5.6.0",
+    "eslint": "^8.4.1",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-airbnb-typescript": "^16.1.0",
+    "eslint-import-resolver-typescript": "^2.5.0",
+    "eslint-plugin-import": "^2.25.3",
+    "nodemon": "^2.0.15",
+    "ts-node": "^10.4.0",
+    "typescript": "^4.5.3"
+  }
+}
