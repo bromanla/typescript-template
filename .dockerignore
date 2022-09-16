@@ -1,0 +1,10 @@
+# Compiled output
+/node_modules
+/build
+
+# Git
+.git
+
+# SQL dump
+*.sql
+*.sqlite
