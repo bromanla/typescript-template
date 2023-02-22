@@ -2,18 +2,23 @@
 
 {
   "compilerOptions": {
-    "module": "commonjs",
-    "removeComments": true,
+    "module": "ES2022",
+    "moduleResolution": "node16",
     "target": "ES2022",
-    "outDir": "./build",
-    "baseUrl": "./src",
+    "removeComments": true,
+    "outDir": "build",
+    "baseUrl": ".",
     "strict": true,
+    "sourceMap": true,
     "allowSyntheticDefaultImports": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "strictPropertyInitialization": false,
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "paths": {
+      "#src/*": ["src/*"]
+    }
   }
 }

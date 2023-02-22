@@ -1,6 +1,6 @@
 # Compiled output
-/node_modules
-/build
+node_modules
+build
 
 # Logs
 logs

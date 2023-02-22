@@ -1,11 +1,3 @@
-## Docker
-
-> Make environment variables (see docker-compose.yaml)
-
-```bash
-docker-compose up
-```
-
 ## Build
 
 > Make environment variables (see .env.example)
@@ -33,5 +25,5 @@ npm ci --omit=dev
 To run the application:
 
 ```bash
-npm run start:prod
+npm run start:
 ```
