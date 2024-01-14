@@ -1,8 +1,14 @@
+# typescript-template
+
+## ENV
+
+| Name      | Description          | Default       |
+| --------- | -------------------- | ------------- |
+| LOG_LEVEL | logging level        | debug         |
+| NODE_ENV  | environment variable | production    |
+| TZ        | timezone             | Europe/Moscow |
+
 ## Build
-
-> Make environment variables (see .env.example)
-
-> We use node version 16+
 
 Download the dependencies:
 
@@ -25,5 +31,5 @@ npm ci --omit=dev
 To run the application:
 
 ```bash
-npm run start:
+npm run start
 ```

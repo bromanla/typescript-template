@@ -2,23 +2,31 @@
 
 {
   "compilerOptions": {
-    "module": "ES2022",
-    "moduleResolution": "node16",
-    "target": "ES2022",
-    "removeComments": true,
-    "outDir": "build",
-    "baseUrl": ".",
-    "strict": true,
-    "sourceMap": true,
-    "allowSyntheticDefaultImports": true,
-    "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true,
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
-    "strictPropertyInitialization": false,
+    /* Base options */
     "esModuleInterop": true,
+    "skipLibCheck": true,
+    "target": "ES2022",
+
+    /* Strictness */
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "strictPropertyInitialization": false,
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+
+    /* Typescript transpiling */
+    "moduleResolution": "NodeNext",
+    "module": "NodeNext",
+    "rootDir": "src",
+    "outDir": "build",
+    "sourceMap": true,
+    "removeComments": true,
+    "baseUrl": ".",
+
+    "lib": ["ES2022", "ESNext.Disposable"],
     "paths": {
       "#src/*": ["src/*"]
     }
-  }
+  },
+  "include": ["src/**/*.ts"]
 }

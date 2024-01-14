@@ -3,24 +3,23 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "prebuild": "rimraf build",
-    "build": "tsc",
-    "start": "node ./build/index.js",
-    "start:dev": "tsc-watch --onSuccess \"node ./build/index.js\""
+    "prebuild": "rm -rf build",
+    "build": "tsc --build",
+    "start": "node --env-file=.env build/index.js",
+    "start:dev": "tsc-watch --onSuccess \"node --env-file=.env --inspect build/index.js\""
   },
   "devDependencies": {
-    "@types/node": "^18.14.0",
-    "@typescript-eslint/eslint-plugin": "^5.53.0",
-    "@typescript-eslint/parser": "^5.53.0",
-    "eslint": "^8.34.0",
-    "eslint-config-prettier": "^8.6.0",
-    "eslint-plugin-prettier": "^4.2.1",
-    "prettier": "^2.8.4",
-    "rimraf": "^4.1.2",
-    "tsc-watch": "^6.0.0",
-    "typescript": "^4.9.5"
+    "prettier": "^3.2.2",
+    "tsc-watch": "^6.0.4",
+    "typescript": "^5.3.3",
+    "@types/node": "^20.11.0",
+    "@total-typescript/ts-reset": "^0.5.1"
   },
   "imports": {
     "#src/*": "./build/*"
+  },
+  "volta": {
+    "node": "20.8.0",
+    "npm": "10.1.0"
   }
 }
